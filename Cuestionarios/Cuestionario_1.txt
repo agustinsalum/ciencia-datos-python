@@ -1,0 +1,101 @@
+1) Dada la columna edades [20,23,19,60,50,20,25,65,55,40,30,50,15,65,150,60] que valor es un outlier?
+
+Seleccione una:
+a. 20
+b. No existen outlier
+c. 150
+
+2) El analisis de frecuencia se reliza en variables categoricas ?
+
+Seleccione una:
+Verdadero
+Falso
+
+3) Tengo una variable categorica "Ciudad" . ¿Que que grafico me combiene utilizar ?
+
+Seleccione una:
+a. De Dispersion y Torta
+b. De Barras y Torta
+c. De Histograma y Disperison
+d. De Disperion y Boxplot
+
+4) Segun la matriz de correlacion ,¿Cuando tengo correlacion "fuerte" entre dos variables 
+
+Seleccione una:
+a. Cuando el valor absoluto es menor a 0.50
+b. Cuando el valor absoluto es mayor a 0.50
+
+5) ¿Que fucion elimina los valores nulos?
+
+Seleccione una:
+a. sum()
+b. dropna()
+c. describe()
+
+---------------------------
+
+Respuestas:
+
+1) 150
+
+Para determinar si hay valores atípicos (outliers) en una columna de datos, es común utilizar métodos 
+estadísticos como el rango intercuartil (IQR) y visualizaciones como el diagrama de caja (box plot). 
+El IQR se calcula como la diferencia entre el tercer cuartil (Q3) y el primer cuartil (Q1), y se 
+utiliza para identificar valores que están por encima de Q3 + 1.5 * IQR o por debajo de Q1 - 1.5 * IQR.
+
+Dada la columna de edades: [20, 23, 19, 60, 50, 20, 25, 65, 55, 40, 30, 50, 15, 65, 150, 60], podemos 
+calcular los valores relevantes:
+
+Q1 (primer cuartil): 20.75
+Q3 (tercer cuartil): 57.5
+IQR (rango intercuartil): 36.75
+
+Luego, podemos aplicar la regla del 1.5 * IQR:
+
+Valor mínimo aceptable: Q1 - 1.5 * IQR = 20.75 - 1.5 * 36.75 = -24.125
+Valor máximo aceptable: Q3 + 1.5 * IQR = 57.5 + 1.5 * 36.75 = 115.375
+
+Dado que el valor 150 está por encima del valor máximo aceptable (115.375), es considerado un outlier.
+
+2) Verdadero.
+
+El análisis de frecuencia se realiza comúnmente en variables categóricas. Las variables categóricas 
+son aquellas que representan diferentes categorías o grupos, pero no tienen un orden inherente entre 
+ellas. Ejemplos de variables categóricas incluyen el género (masculino, femenino), el estado civil 
+(soltero, casado, divorciado), el tipo de producto (A, B, C), etc.
+El análisis de frecuencia implica contar la cantidad de observaciones en cada categoría y mostrar 
+esta información en forma de tablas o gráficos de barras. Esto ayuda a comprender la distribución de 
+las categorías y a obtener información sobre la prevalencia o la proporción de cada categoría en un 
+conjunto de datos.
+
+3) De Barras y Torta
+
+Gráfico de Barras: Este tipo de gráfico te permitirá representar la frecuencia o la cantidad de 
+observaciones para cada categoría (en este caso, cada ciudad). Cada ciudad se representaría en el eje 
+horizontal, y en el eje vertical se mostraría la cantidad de veces que aparece esa ciudad en tus datos. Esto proporciona una vista clara de las diferencias en la distribución de las ciudades.
+
+Gráfico de Torta (o Pastel): Este gráfico es útil para mostrar la proporción de cada categoría en 
+relación con el total. Cada sector del pastel representa una ciudad, y el tamaño del sector se 
+relaciona con la proporción de esa ciudad en tus datos. Puede ser útil para tener una idea rápida de 
+la distribución relativa de las ciudades.
+
+Ambos tipos de gráficos son comunes y efectivos para visualizar datos categóricos como "Ciudad". Sin 
+embargo, si solo puedes elegir una opción, la opción b (De Barras y Torta) es la más adecuada para 
+representar y comunicar la información sobre la distribución de las ciudades en tus datos.
+
+4) Cuando el valor absoluto es mayor a 0.50
+
+La correlación se mide en una escala de -1 a 1, donde -1 indica una correlación negativa perfecta, 1 
+indica una correlación positiva perfecta y 0 indica ausencia de correlación.
+
+Cuando se dice que hay una correlación "fuerte" entre dos variables, generalmente se hace referencia 
+a una correlación que es significativamente mayor a 0.50 en valor absoluto. Valores de correlación 
+más cercanos a 1 (positivos) o -1 (negativos) indican una relación más fuerte entre las variables, lo 
+que sugiere que los cambios en una variable están muy relacionados con los cambios en la otra variable.
+
+5) dropna()
+
+se utiliza para eliminar filas o columnas que contienen valores nulos en un DataFrame. Puedes usar 
+esta función para limpiar tus datos al eliminar las observaciones que tienen valores faltantes.
+
+Nota: fillna(0) reemplazará todos los valores nulos en el DataFrame por el valor 0
